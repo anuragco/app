@@ -10,8 +10,7 @@ function App() {
     e.preventDefault();
 
     try{
-        const response = await axios.get(`http://197.168.1.157:5000/valid?email=${email}`)
-
+        const response = await axios.get(`http://13.202.241.112/api/valid?email=${email}`)
         setMessage(response.data);
     }catch (error){
       if (error.response && error.response.status === 401) {
